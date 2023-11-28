@@ -6,17 +6,45 @@ import Achievement from './Achievement';
 import Experience from "./Experience"
 
 const Resume = () => {
-   const [educationData, setEducationData] = useState(true);
+   const [educationData, setEducationData] = useState(false);
    const [skillData, setSkillData] = useState(false);
    const [experienceData, setExperienceData] = useState(false);
-   const [achievementData, setAchievementData] = useState(false);
+   const [achievementData, setAchievementData] = useState(true);
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
-        <Title title="7+ YEARS OF EXPERIENCE" des="My Resume" />
+        <Title title="خبرة في مجالي اكثر من 14 سنة" des="السيرة الذاتية" />
       </div>
       <div>
         <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+            <li
+                 onClick={() =>
+                  setEducationData(false) &
+               setSkillData(false) &
+                setExperienceData(false) &
+                setAchievementData(true)
+              }
+              className={`${
+                achievementData
+                ? "border-designColor rounded-lg"
+                : "border-transparent"
+              } resumeLi`}
+          >
+            الإنجازات
+          </li>
+          <li
+            onClick={() =>
+              setEducationData(false) &
+              setSkillData(true) &
+              setExperienceData(false) &
+              setAchievementData(false)
+            }
+            className={`${
+              skillData ? "border-designColor rounded-lg" : "border-transparent"
+            } resumeLi`}
+          >
+            المهارات 
+          </li>
           <li
             onClick={() =>
               setEducationData(true) &
@@ -30,21 +58,11 @@ const Resume = () => {
                 : "border-transparent"
             } resumeLi`}
           >
-            Education
+            التعليم
           </li>
-          <li
-            onClick={() =>
-              setEducationData(false) &
-              setSkillData(true) &
-              setExperienceData(false) &
-              setAchievementData(false)
-            }
-            className={`${
-              skillData ? "border-designColor rounded-lg" : "border-transparent"
-            } resumeLi`}
-          >
-            Professional Skills
-          </li>
+
+
+
           <li
             onClick={() =>
               setEducationData(false) &
@@ -58,29 +76,18 @@ const Resume = () => {
                 : "border-transparent"
             } resumeLi`}
           >
-            Experience
+            الخبرات
           </li>
-          <li
-            onClick={() =>
-              setEducationData(false) &
-              setSkillData(false) &
-              setExperienceData(false) &
-              setAchievementData(true)
-            }
-            className={`${
-              achievementData
-                ? "border-designColor rounded-lg"
-                : "border-transparent"
-            } resumeLi`}
-          >
-            Achievements
-          </li>
+
         </ul>
       </div>
-      {educationData && <Education />}
-      {skillData && <Skills />}
       {achievementData && <Achievement />}
+      {skillData && <Skills />}
+      {educationData && <Education />}
       {experienceData && <Experience />}
+      
+      
+      
  
     </section>
   );

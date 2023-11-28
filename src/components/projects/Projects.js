@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../layouts/Title'
-import { projectOne, projectTwo, projectThree } from "../../assets/index";
+import { newsone, newsTow } from "../../assets/index";
 import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
@@ -20,37 +20,37 @@ const Projects = () => {
           title="عنوان الخبر "
           des=" شرح بسيط عن الخبر  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!  "
-          src={projectOne}
+          src={newsone}
         />
         <ProjectsCard
           title="عنوان الخبر  "
           des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
+          src={newsTow}
         />
         <ProjectsCard
           title="عنوان الخبر "
           des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
+          src={newsone}
         />
         <ProjectsCard
           title="عنوان الخبر "
           des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
+          src={newsTow}
         />
         <ProjectsCard
           title="عنوان الخبر "
           des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectOne}
+          src={newsone}
         />
         <ProjectsCard
           title="عنوان الخبر "
           des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
+          src={newsTow}
         />
       </div>
     </section>
