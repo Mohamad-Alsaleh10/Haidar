@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram , FaReact , FaTelegram  } from "react-icons/fa";
 import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 
 const LeftBanner = () => {
@@ -38,14 +38,17 @@ const LeftBanner = () => {
         <div>
           <h2 className="text-base uppercase font-titleFont mb-4">تابعني</h2>
           <div className="flex gap-4">
-            <a href="" className="bannerIcon">
+            <a href="https://www.facebook.com/Hedar.Razoq1" className="bannerIcon">
               <FaFacebookF />
             </a>
-            <a href="" className="bannerIcon">
+            <a href="https://x.com/haidarrazook/status/1558895663660019712?s=12&t=aMH37QH5Rg6JkA4weTP7XQ" className="bannerIcon">
               <FaTwitter />
             </a>
-            <a href="" className="bannerIcon">
-              <FaLinkedinIn />
+            <a href="https://instagram.com/haidar_razouk?igshid=OGQ5ZDc2ODk2ZA==" className="bannerIcon">
+              <FaInstagram  />
+            </a>
+            <a href="https://t.me/haidarrazooq" className="bannerIcon">
+              <FaTelegram   />
             </a>
           </div>
         </div>

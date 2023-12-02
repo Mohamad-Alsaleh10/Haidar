@@ -53,7 +53,7 @@ const Contact = () => {
       <div className="flex justify-center items-center text-center">
         <Title title="التواصل" des="تواصل معي" />
       </div>
-      <div className="w-screen flex justify-center items-center text-center">
+      <div className=" flex justify-center items-center text-center">
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-center items-center">
           <ContactLeft />
         </div>

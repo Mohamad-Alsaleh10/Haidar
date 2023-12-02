@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram , FaReact , FaTelegram  } from "react-icons/fa";
 import {logo} from "../../assets/index"
 import { navLinksdata } from '../../constants';
 
@@ -72,23 +72,27 @@ const Navbar = () => {
               </ul>
               <div className="flex flex-col gap-4">
                 <h2 className="text-base uppercase font-titleFont mb-4">
-                  Find me in
+                  تابعني
                 </h2>
                 <div className="flex gap-4">
-                  <span className="bannerIcon">
+                  <a href='https://www.facebook.com/Hedar.Razoq1' className="bannerIcon">
                     <FaFacebookF />
-                  </span>
-                  <span className="bannerIcon">
+                  </a>
+                  <a href='https://x.com/haidarrazook/status/1558895663660019712?s=12&t=aMH37QH5Rg6JkA4weTP7XQ' className="bannerIcon">
                     <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaLinkedinIn />
-                  </span>
+                  </a>
+                  <a href='https://instagram.com/haidar_razouk?igshid=OGQ5ZDc2ODk2ZA==' className="bannerIcon">
+                    <FaInstagram />
+                  </a>
+                  <a href='https://t.me/haidarrazooq' className="bannerIcon">
+                    <FaTelegram />
+                  </a>
                 </div>
               </div>
               <span
                 onClick={() => setShowMenu(false)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-designColor duration-300 text-2xl cursor-pointer"
+                style={{ direction: "ltr", left: 0 }}
               >
                 <MdClose />
               </span>

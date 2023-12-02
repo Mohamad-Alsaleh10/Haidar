@@ -7,7 +7,7 @@ const NewsTicker = ({ news }) => {
     <div className="news-ticker-container ">
       <ul className="news-list">
         {news.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
         ))}
       </ul>
     </div>

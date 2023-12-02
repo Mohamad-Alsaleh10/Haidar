@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram , FaReact , FaTelegram  } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
 
 const ContactLeft = () => {
@@ -21,21 +21,24 @@ const ContactLeft = () => {
         </p>
 
         <p className="text-base text-gray-400 flex items-center gap-2 justify-center ">
-          البريد الإلكتروني <span className="text-lightText">Info@gmail.com</span>
+          البريد الإلكتروني <span className="text-lightText"><a href="mailto:Info@haidarrazooq.com">Info@haidarrazooq.com</a></span>
         </p>
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-base uppercase font-titleFont mb-4">تابعني</h2>
         <div className="flex gap-4 justify-center">
-          <span className="bannerIcon">
+          <a href="https://www.facebook.com/Hedar.Razoq1" className="bannerIcon">
             <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
+          </a>
+          <a href="https://x.com/haidarrazook/status/1558895663660019712?s=12&t=aMH37QH5Rg6JkA4weTP7XQ" className="bannerIcon">
             <FaTwitter />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
-          </span>
+          </a>
+          <a href="https://instagram.com/haidar_razouk?igshid=OGQ5ZDc2ODk2ZA==" className="bannerIcon">
+            <FaInstagram />
+          </a>
+          <a href="https://t.me/haidarrazooq" className="bannerIcon">
+            <FaTelegram />
+          </a>
         </div>
       </div>
     </div>
