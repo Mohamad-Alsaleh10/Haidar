@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import Title from '../layouts/Title'
 import {portfolioone,portfoliotwo,portfoliothree } from "../../assets/index";
 import PortfolioCard from './PortfolioCard';
 
 const Portfolio = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://192.168.1.4:8000/api/posts')
+      .then(response => {
+        setData(response.data.data) // access the data property of the response
+      })
+      .catch(error => console.error(error));
+  }, []);
   return (
     <section
       id="Portfolio"
@@ -15,27 +25,18 @@ const Portfolio = () => {
           des=" معرض الأعمال"
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <PortfolioCard
-          title="عنوان العمل "
-          des=" شرح بسيط عن الخبر  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!  "
-          src={portfolioone}
-        />
-        <PortfolioCard
-          title="عنوان العمل  "
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={portfoliotwo}
-        />
-        <PortfolioCard
-          title="عنوان العمل "
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={portfoliothree}
-        />
 
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
+        {data.map((post, index) => (
+          <PortfolioCard
+            key={index}
+            title={post.title}
+            des={post.body}
+            src={post.images} // use the images property of the post
+          />
+        ))}
       </div>
+
     </section>
   );
 }

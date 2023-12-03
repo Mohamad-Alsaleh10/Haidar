@@ -19,9 +19,10 @@ const PortfolioCard = ({ title, des, src }) => {
             </h3>
 
           </div>
-          <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
-            {des}
-          </p>
+          <p
+            className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300"
+            dangerouslySetInnerHTML={{ __html: des }}
+          ></p>
         </div>
       </div>
     </div>
